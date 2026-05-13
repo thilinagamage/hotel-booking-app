@@ -27,27 +27,8 @@ const perks = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[linear-gradient(180deg,_#f8f4ee_0%,_#f3ede4_42%,_#ede5d8_100%)] text-stone-900">
+    <div className="bg-[linear-gradient(180deg,_#f8f4ee_0%,_#f3ede4_42%,_#ede5d8_100%)]">
       <section className="mx-auto flex min-h-screen w-full max-w-6xl flex-col px-6 py-6 sm:px-8 lg:px-10">
-        <header className="flex items-center justify-between border-b border-stone-300/70 pb-5">
-          <div>
-            <p className="text-xs uppercase tracking-[0.4em] text-stone-500">
-              Serene Stay
-            </p>
-            <h1 className="mt-1 text-lg font-semibold tracking-tight">
-              Hotel booking made calm.
-            </h1>
-          </div>
-          <nav className="flex items-center gap-4 text-sm text-stone-600">
-            <Link href="/about" className="transition hover:text-stone-900">
-              About
-            </Link>
-            <Link href="/dashboard" className="transition hover:text-stone-900">
-              Dashboard
-            </Link>
-          </nav>
-        </header>
-
         <div className="grid flex-1 items-center gap-12 py-14 lg:grid-cols-[1.05fr_0.95fr] lg:py-20">
           <div className="max-w-2xl">
             <p className="inline-flex rounded-full border border-stone-300 bg-white px-4 py-2 text-xs font-medium uppercase tracking-[0.28em] text-stone-500 shadow-sm">
@@ -200,6 +181,6 @@ export default function Home() {
           </div>
         </section>
       </section>
-    </main>
+    </div>
   );
 }
