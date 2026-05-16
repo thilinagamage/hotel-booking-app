@@ -4,7 +4,8 @@ import { PrismaClient } from "../src/generated/prisma/client";
 import bcrypt from "bcryptjs";
 
 const connectionString = process.env.DATABASE_URL!;
-const adapter = new PrismaPg({ connectionString });
+const ssl = connectionString.includes("sslmode=require") || process.env.NODE_ENV === "production";
+const adapter = new PrismaPg({ connectionString, ssl });
 const prisma = new PrismaClient({ adapter });
 
 async function main() {

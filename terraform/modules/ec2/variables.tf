@@ -1,0 +1,14 @@
+variable "environment" { type = string }
+variable "vpc_id" { type = string }
+variable "subnet_ids" { type = list(string) }
+variable "public_subnet_ids" { type = list(string) }
+variable "security_group_id" { type = string }
+variable "alb_security_group_id" { type = string }
+variable "instance_profile_arn" { type = string }
+variable "certificate_arn" { type = string }
+variable "sns_topic_arn" { type = string }
+variable "instance_type" { type = string }
+variable "app_port" { type = number }
+variable "asg_min_size" { type = number }
+variable "asg_max_size" { type = number }
+variable "github_repo" { type = string }
